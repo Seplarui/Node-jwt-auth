@@ -1,13 +1,13 @@
-module.exports = (sequalize, Sequalize) => {
-    const User = sequalize.define("users", {
+module.exports = (sequelize, Sequelize) => {
+    const User = sequelize.define("users", {
         username: {
-            type: Sequalize.STRING
+            type: Sequelize.STRING
         },
         email: {
-            type: Sequalize.STRING
+            type: Sequelize.STRING
         },
         password: {
-            type: Sequalize.STRING
+            type: Sequelize.STRING
         }
     })
     return User;
