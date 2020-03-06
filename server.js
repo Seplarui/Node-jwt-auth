@@ -4,6 +4,11 @@ const cors = require('cors')
 
 const app = express()
 
+// database
+const db = require("./app/models")
+const Role = db.role
+
+
 var corsOptions = {
     origin: "http://localhost:8081"
 }

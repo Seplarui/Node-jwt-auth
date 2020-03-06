@@ -33,7 +33,7 @@ db.role.belongsToMany(db.user, {
     otherKey: "userId"
 })
 
-db.role.belongsToMany(db.role, {
+db.user.belongsToMany(db.role, {
     through: "user_roles",
     foreignKey: "userId",
     otherKey: "roleId"
@@ -41,4 +41,4 @@ db.role.belongsToMany(db.role, {
 
 db.ROLES = ["user", "admin", "moderator"]
 
-module.exports = db
+module.exports= db
