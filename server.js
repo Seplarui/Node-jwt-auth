@@ -30,7 +30,6 @@ function initial() {
     })
 }
 
-
 var corsOptions = {
     origin: "http://localhost:8081"
 }
@@ -44,6 +43,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get("/", (req, res) => {
     res.json({ message: 'Home page' })
 })
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
+
 
 const PORT = process.env.PORT || 8080
 
